@@ -87,7 +87,7 @@ const App = () => {
           >
             <span
               className="output-text"
-             >
+            >
               {color}
             </span>
             <ButtonDelete
