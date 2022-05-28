@@ -1,5 +1,5 @@
 type ButtonDeleteProps = {
-    onDelete: ()=> void
+    onDelete: () => void
 }
 
 const ButtonDelete = ({

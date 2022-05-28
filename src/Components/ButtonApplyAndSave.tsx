@@ -12,9 +12,7 @@ const ButtonApplyAndSave = ({
     }}
   >
     Apply and Save
-
   </button>
-
 );
 
 export default ButtonApplyAndSave;

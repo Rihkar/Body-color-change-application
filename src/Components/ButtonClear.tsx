@@ -1,5 +1,5 @@
 type ButtonClearProps = {
-    onClear: ()=>void
+    onClear: () => void
 }
 
 const ButtonClear = ({
@@ -13,7 +13,6 @@ const ButtonClear = ({
   >
     Clear
   </button>
-
 );
 
 export default ButtonClear;

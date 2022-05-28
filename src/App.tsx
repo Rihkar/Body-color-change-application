@@ -28,9 +28,9 @@ const App = () => {
     toast('Color added!');
   };
 
-  const removeOutputValue = (colorToRemove:string) => {
-    setOutputValue(outputValue.filter((arrayColor) => arrayColor !== colorToRemove));
-  };
+  const removeOutputValue = (colorToRemoveIndex: number) => (
+    setOutputValue(outputValue.filter((_, index) => index !== colorToRemoveIndex))
+  );
 
   return (
     <div className="app">
@@ -75,23 +75,30 @@ const App = () => {
           }}
         />
       </div>
+
       {outputValue.length > 0 && (
-      <div className="output-container">
-        {outputValue.map((color) => (
-          <div key={color} className="output">
-            <span className="output-text">
+      <div
+        className="output-container"
+      >
+        {outputValue.map((color, index) => (
+          <div
+            className="output"
+            key={Math.random()}
+          >
+            <span
+              className="output-text"
+             >
               {color}
             </span>
             <ButtonDelete
-              onDelete={() => removeOutputValue(color)}
+              onDelete={() => removeOutputValue(index)}
             />
           </div>
-
         ))}
-
       </div>
       )}
-      <ToastContainer className="toast" />
+
+      <ToastContainer />
     </div>
   );
 };
